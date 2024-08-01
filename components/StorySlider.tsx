@@ -7,6 +7,8 @@ import styles from "../styles/StorySlider.module.css";
 import style from "../styles/NavBar.module.css";
 import Image from "next/image";
 
+import ProgressBar from "@ramonak/react-progress-bar";
+
 const progressStyle: React.CSSProperties = {
   height: "3px",
   width: "0%",
@@ -75,22 +77,43 @@ const StorySlider: React.FC<StorySliderProps> = ({ user }) => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.sliderContainer}>
+      <div
+        className={styles.progressBarContainer}
+        style={{
+          width: "100%",
+        }}
+      >
+        <div
+          style={{
+            marginTop: "13px",
+            marginLeft: "9px",
+            marginRight: "12px",
+          }}
+        >
+          <ProgressBar
+            completed="60"
+            customLabel=""
+            barContainerClassName={styles.container}
+            completedClassName={styles.barCompleted}
+            labelClassName={styles.hiddenLabel}
+          ></ProgressBar>
+        </div>
+      </div>
       <div style={{ marginLeft: "6px", marginTop: "13px" }}>
-        <div className="relative z-10 h-14 w-14 select-none rounded-full bg-[#ebebeb] object-cover dark:bg-[#1c1c1c]">
-          <div
-            className={`relative z-10 h-15 w-15 select-none rounded-full overflow-hidden object-cover p-[2px]  ${style.gradientBorder} ${style.imageContainer}`}
-          >
-            <Image
-              className={`r relative z-10 h-17 w-17 select-none rounded-full bg-[#ebebeb]  p-[2px] dark:bg-[#1c1c1c] w-full h-full object-cover ${style.image}`}
-              src={user.image}
-              onClick={handleDoubleClick}
-              width={100}
-              height={100}
-              style={{ zIndex: "99" }}
-              alt={""}
-            />
-          </div>
+        {/* <div className="relative z-10 h-2.5 w-2.5 select-none rounded-full bg-[#ebebeb] object-cover dark:bg-[#1c1c1c]"></div> */}
+        <div
+          className={`relative z-10 h-2.5 w-2.5 select-none rounded-full overflow-hidden object-cover p-[2px]  ${style.gradientBorder} ${style.imageContainers}`}
+        >
+          <Image
+            className={`r relative z-10 h-17 w-17 select-none rounded-full bg-[#ebebeb]  p-[2px] dark:bg-[#1c1c1c] w-full h-full object-cover ${style.images}`}
+            src={user.image}
+            onClick={handleDoubleClick}
+            width={100}
+            height={100}
+            style={{ zIndex: "99" }}
+            alt={""}
+          />
         </div>
       </div>
 

@@ -56,3 +56,41 @@
   overflow: hidden;
   width: 100vw;
 }
+.progressBarContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #363632;
+  z-index: 10;
+}
+
+.progressBar {
+  height: 100%;
+  width: 0;
+  background-color: #f0fbf9;
+  transition: width 0.1s linear;
+}
+.sliderContainer {
+  margin-top: 22px;
+}
+
+.container {
+  background-color: rgb(79, 75, 76);
+}
+
+.barCompleted {
+  margin-top: 12px;
+  background-color: rgb(226, 237, 241);
+  width: 100%;
+  height: 6px;
+  border-radius: 13px;
+}
+
+.label {
+  display: none;
+}
+.hiddenLabel {
+  display: none !important;
+}

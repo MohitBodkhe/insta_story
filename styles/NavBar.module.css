@@ -27,3 +27,11 @@
   overflow: hidden;
   background-color: #ebebeb;
 }
+
+.imageContainers {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  background-color: #ebebeb;
+}

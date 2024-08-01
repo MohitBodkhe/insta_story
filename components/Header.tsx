@@ -100,8 +100,8 @@ export default function Header() {
               zIndex: "99",
               color: "white",
               position: "absolute",
-              right: "33px",
-              top: "18px",
+              right: "16px",
+              top: "22px",
               fontSize: "20px",
             }}
           >
